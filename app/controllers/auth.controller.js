@@ -54,7 +54,7 @@ if (!valid) {
   //const {to, subject, text } = req.body;
   const mailData = {
       from: 'newsll321@gmail.com',
-      to: "pradeepkumarverma009@gmail.com",
+      to: req.body.email,
       subject: "Credentials",
       text: `text`,
       html: `<b>Hey there! </b><br> This is your login credentials: ${password}<br/>`,
