@@ -28,7 +28,7 @@ exports.signup = (req, res) => {
 const { body } = req; const 
 
 blogSchema = Joi.object({ 
-  email: Joi.string().required(), 
+  email: Joi.string().email({ tlds: { allow: false } }), 
   username: Joi.string().required() 
   //authorId: Joi.number().required() 
 }); 
@@ -132,7 +132,7 @@ exports.signin = async(req, res) => {
   const { body } = req; const 
 
 blogSchema = Joi.object({ 
-  email: Joi.string().required(), 
+  email: Joi.string().email({ tlds: { allow: false } }), 
   username: Joi.string().required() 
   //authorId: Joi.number().required() 
 }); 
